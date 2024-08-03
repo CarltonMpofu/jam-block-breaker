@@ -10,6 +10,8 @@ public class Ball : MonoBehaviour
 
     [SerializeField] float xSpeed, ySpeed = 0;
 
+    [SerializeField] AudioClip[] audioClips;
+
     Vector2 difference;
 
     Rigidbody2D rb;
@@ -54,4 +56,15 @@ public class Ball : MonoBehaviour
         }
         
     }
+    
+    private void OnCollisionEnter2D(Collision2D other) 
+    {
+        int idx = Random.Range(0, audioClips.Length);
+
+        AudioClip audioClip = audioClips[idx];
+
+        GetComponent<AudioSource>().PlayOneShot(audioClip);
+    }
+
+
 }
