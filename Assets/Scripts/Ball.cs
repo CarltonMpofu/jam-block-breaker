@@ -10,7 +10,7 @@ public class Ball : MonoBehaviour
 
     [SerializeField] float xSpeed, ySpeed = 0;
 
-    [SerializeField] AudioClip[] audioClips;
+    [SerializeField] AudioClip[] ballSounds;
 
     Vector2 difference;
 
@@ -59,9 +59,9 @@ public class Ball : MonoBehaviour
     
     private void OnCollisionEnter2D(Collision2D other) 
     {
-        int idx = Random.Range(0, audioClips.Length);
+        int idx = Random.Range(0, ballSounds.Length);
 
-        AudioClip audioClip = audioClips[idx];
+        AudioClip audioClip = ballSounds[idx];
 
         GetComponent<AudioSource>().PlayOneShot(audioClip);
     }

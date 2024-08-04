@@ -165,8 +165,7 @@ MonoBehaviour:
   paddle: {fileID: 0}
   xSpeed: 3
   ySpeed: 7
-  audioClips:
-  - {fileID: 8300000, guid: 7dccee9d3decc734882710c048e4d0b1, type: 3}
+  ballSounds:
   - {fileID: 8300000, guid: 04afa98d192d7d74c9a807186e15547f, type: 3}
   - {fileID: 8300000, guid: 5cdf07ec81b78544b9a57fbac08e7ac6, type: 3}
   - {fileID: 8300000, guid: 0e1394760ccd1034f8e6952d80136d49, type: 3}
